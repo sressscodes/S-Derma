@@ -1,0 +1,546 @@
+/* General reset for margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #222;
+  color: #fff;
+}
+
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+  background-color: #555;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons .signup {
+  background-color: #007BFF;
+}
+
+.auth-buttons .signup:hover {
+  background-color: #0056b3;
+}
+
+/* Section styles */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  gap: 20px;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 200px;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  max-width: 100%;
+
+}
+
+
+
+.cta-button {
+  padding: 200px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.image-content {
+  flex: 1;
+  text-align: right;
+  padding-right: 100px;
+
+}
+
+.image-content img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+
+
+}
+
+.top-dermatologists {
+  text-align: center;
+  margin-top: 40px;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100PX;
+  margin-left: 150px;
+  margin-right: 150px;
+  border: 1px solid rgb(54, 54, 54);
+}
+
+.top-dermatologists h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.dermatologist-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding-top: 30px;
+
+
+
+}
+
+.dermatologist {
+  text-align: center;
+}
+
+.dermatologist img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dermatologist p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
+
+.dermatologist-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.info-container {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+  max-width: 50%;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Skincare Section Styles */
+.skincare-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+
+  background-color: #f9f9f9;
+}
+
+.products-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.image1-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*/..../*/
+.hub-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.hub-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.hubimage-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+  max-width: 50%;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cta-button a {
+  background-color: #007bff;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button a:hover {
+  background-color: #0056b3;
+}
+
+.testimonials {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-content h3 {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.testimonial-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.testimonial-content strong {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.faq-section {
+  padding: 20px;
+  max-width: 1300px;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.faq-container h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.faq-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.faq-list .faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #f1f1f1;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 16px;
+  color: #555;
+  padding: 10px;
+  border-left: 2px solid #007bff;
+  margin-left: 10px;
+}
+
+.chat-section {
+  margin-top: 20px;
+  background-color: #eef4ff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.chat-container p {
+  margin: 5px 0;
+}
+
+.chat-button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-button:hover {
+  background-color: #0056b3;
+}
+
+.footer-section {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.footer-socials a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.footer-socials img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  color: #ccc;
+}

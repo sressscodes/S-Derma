@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <style>
+    /* Add simple styles for navigation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      overflow: hidden;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .navbar img {
+      height: 40px;
+      /* Adjust the logo size */
+    }
+
+    .navbar a {
+      color: #000000;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin-left: 20px;
+      /* Add space between links */
+    }
+
+    .navbar a:hover {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      font-weight: 400;
+    }
+
+    #login-btn {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      font-weight: 400;
+    }
+
+    content {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <!-- Logo on the left -->
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+
+    <!-- Navigation links aligned to the right -->
+    <div style="display: flex;">
+      <a href="/">Home</a>
+      <a href="/article">Articles</a>
+      <a href="/get_recommendations">FAQ</a>
+      <a href="/book_now">Book Now</a>
+      <a href="/get_recommendations">Get Recommendations</a>
+      <a id="login-btn" href="/">Login</a>
+    </div>
+  </div>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+
+</html>

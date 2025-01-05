@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Products Recommendation System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    /* Simple CSS to improve the layout */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  {% extends "base.html" %}
+  {% block content %}
+  <section class="content-section">
+    <div class="text-content">
+      <h1>Effortless Skin Care Appointments at Your Fingertips – Book with Confidence</h1>
+      <button class="cta-button">Book now</button>
+    </div>
+    <div class="image-content">
+      <img src="{{ url_for('static', filename='images/image1.png') }}" alt="Showcase Image">
+    </div>
+  </section>
+
+  <section class="top-dermatologists">
+    <h2>Top Dermatologists</h2>
+    <div class="dermatologist-list">
+      <div class="dermatologist">
+        <img src="{{ url_for('static', filename='images/image2.png') }}" alt="Doctor 1">
+        <p>Dr. Raj Ghimire</p>
+      </div>
+      <div class="dermatologist">
+        <img src="{{ url_for('static', filename='images/image3.png') }}" alt="Doctor 2">
+        <p>Dr. Name 2</p>
+      </div>
+      <div class="dermatologist">
+        <img src="{{ url_for('static', filename='images/image4.png') }}" alt="Doctor 3">
+        <p>Dr. Name 3</p>
+      </div>
+      <div class="dermatologist">
+        <img src="{{ url_for('static', filename='images/image5.png') }}" alt="Doctor 4">
+        <p>Dr. Name 4</p>
+      </div>
+      <div class="dermatologist">
+        <img src="{{ url_for('static', filename='images/image6.png') }}" alt="Doctor 5">
+        <p>Dr. Name 5</p>
+      </div>
+      <div class="dermatologist">
+        <img src="{{ url_for('static', filename='images/image7.png') }}" alt="Doctor 6">
+        <p>Dr. Name 6</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dermatologist-info">
+    <div class="info-container">
+      <div class="image-container">
+        <img src="{{ url_for('static', filename='images/image8.png') }}" alt="Dermatologist performing a procedure">
+      </div>
+      <div class="text-container">
+        <h2>Find a Dermatologist Near You</h2>
+        <p>Your skin deserves the best care. Our platform connects you with highly skilled dermatologists across
+          multiple locations, ensuring expert advice is just a few clicks away.</p>
+        <button class="cta-button">Find Here</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="skincare-products">
+    <div class="products-container">
+      <div class="text-content">
+        <h2>Shop Dermatologist Approved Skincare</h2>
+        <p>Shop dermatologist-approved skincare for every skin type. Our clinically-tested products target acne, aging,
+          hydration, and more. Achieve healthier, glowing skin today!</p>
+        <button class="cta-button"><a href="main.html">Explore More!</a></button>
+      </div>
+      <div class="image1-content">
+        <img src="{{ url_for('static', filename='images/image8.png') }}" alt="Dermatologist Approved Skincare">
+      </div>
+    </div>
+  </section>
+
+  <section class="hub-info">
+    <div class="hub-container">
+      <div class="hubimage-container">
+        <img src="{{ url_for('static', filename='images/image1.png') }}" alt="Education Hub">
+      </div>
+      <div class="text1-container">
+        <h2>Skincare Education Hub</h2>
+        <p>Learn from top dermatologists with our Skincare Education Hub. Access articles, videos, and tutorials on skin
+          types, ingredients, and routines. Stay informed on the latest skincare trends and treatment options.</p>
+        <button class="cta-button"><a href="article.html">Find Here</a></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>User Reviews</h2>
+    <p>What our users have to say about us</p>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <img src="{{ url_for('static', filename='images/image13.png') }}" alt="User 1">
+        <div class="testimonial-content">
+          <h3>Amazing Virtual Consultation Experience!</h3>
+          <p>"I had a virtual consultation for my acne, and the dermatologist was incredibly helpful. The process was so
+            easy, and the personalized skincare routine they gave me has done wonders for my skin! I would highly
+            recommend it if you want expert advice without leaving your house."</p>
+          <p><strong>— Emil R.</strong></p>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <img src="{{ url_for('static', filename='images/image12.png') }}" alt="User 2">
+        <div class="testimonial-content">
+          <h3>Incredible Support and Superb Results</h3>
+          <p>"After struggling with rosacea for years, I finally found help through this website. The dermatologist I
+            consulted with was so understanding, and their recommended treatment has been a game changer. The education
+            hub is also super helpful for learning more about my condition."</p>
+          <p><strong>— James T.</strong></p>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <img src="{{ url_for('static', filename='images/image11.png') }}" alt="User 3">
+        <div class="testimonial-content">
+          <h3>Very Convenient and Effective Website</h3>
+          <p>"I was hesitant to try online dermatology, but I'm glad I did! The consultation was smooth, and the
+            skincare plan they gave me worked like magic. Everything arrived quickly and was packaged nicely. My only
+            suggestion would be to add more payment options, but overall, a great experience!"</p>
+          <p><strong>— Lisa M.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+      <p>Here are some frequently asked questions to help enhance your experience with our platform.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            What services can I book through your platform?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            You can book consultations, explore skincare products, and access our education hub.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Can I reschedule or cancel my appointment?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes, you can easily reschedule or cancel your appointment through our platform.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Is there a consultation fee?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            No, we offer free consultations to all our users!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Company Logo">
+        <p>Your trusted skincare partner.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@saderma.com</p>
+        <p>Phone: +977 9848840460</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank"><img
+              src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook"></a>
+          <a href="https://www.twitter.com" target="_blank"><img
+              src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter"></a>
+          <a href="https://www.instagram.com" target="_blank"><img
+              src="{{ url_for('static', filename='images/instagram-icon.png') }}" alt="Instagram"></a>
+          <a href="https://www.linkedin.com" target="_blank"><img
+              src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn"></a>
+          <a href="https://www.linkedin.com" target="_blank"><img
+              src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 S-Derma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript for FAQ Toggle -->
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const arrow = element.querySelector('.arrow');
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        arrow.textContent = "▼";
+      } else {
+        answer.style.display = "block";
+        arrow.textContent = "▲";
+      }
+    }
+  </script>
+  {% endblock %}
+</body>
+
+</html>
