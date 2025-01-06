@@ -12,18 +12,17 @@
   {% extends "base.html" %}
   {% block content %}
   <header class="welcome-section">
-    <h1>Welcome to our Skincare Hub</h1>
+    <h1>Skincare Education Hub</h1>
     <p>Explore expert advice, trusted dermatologists, and curated skincare products for your unique skin needs.</p>
+    <section>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for articles, tips, or topics..." id="search-input">
+        <button class="search-button">Search</button>
+      </div>
+    </section>
   </header>
-  <section>
-    <div class="search-bar">
-      <input type="text" placeholder="Search for articles, tips, or topics..." id="search-input">
-      <button class="search-button">Search</button>
-    </div>
-  </section>
 
   <section id="articles" class="articles-section">
-    <h2>Our Latest Articles</h2>
     <div class="articles-container">
       <div class="article-card">
         <img src="{{ url_for('static', filename='images/image1.png') }}" alt="Skincare">

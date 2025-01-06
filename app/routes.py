@@ -9,10 +9,12 @@ main = Blueprint('main', __name__)
 data = pd.read_csv('Nepali_Derma.csv')
 derma_list = data.to_dict(orient='records')
 
-# Route to home page
 @main.route('/')
 def home():
-    return render_template('index.html')
+    # Assign images dynamically based on index
+    for index, derma in enumerate(derma_list[:6]):  # Limit to top 6 dermatologists
+        derma['image'] = f'image{index + 1}.png'  # Assign images sequentially (e.g., image1.png, image2.png, etc.)
+    return render_template('index.html', dermatologists=derma_list[:6])
 
 # Route to article page
 @main.route('/article')

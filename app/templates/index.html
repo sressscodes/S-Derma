@@ -27,8 +27,9 @@
   {% block content %}
   <section class="content-section">
     <div class="text-content">
-      <h1>Effortless Skin Care Appointments at Your Fingertips – Book with Confidence</h1>
-      <button class="cta-button">Book now</button>
+      <h2>Effortless Skin Care Appointments at Your Fingertips</h2>
+      <h1>Book with Confidence</h1>
+      <a id="book-button" href="/book_now">Book Now</a>
     </div>
     <div class="image-content">
       <img src="{{ url_for('static', filename='images/image1.png') }}" alt="Showcase Image">
@@ -38,31 +39,14 @@
   <section class="top-dermatologists">
     <h2>Top Dermatologists</h2>
     <div class="dermatologist-list">
+      {% for derma in dermatologists %}
       <div class="dermatologist">
-        <img src="{{ url_for('static', filename='images/image2.png') }}" alt="Doctor 1">
-        <p>Dr. Raj Ghimire</p>
+        <img src="{{ url_for('static', filename='images/' + derma['image']) }}" alt="Image of {{ derma['name'] }}">
+        <p>{{ derma['Name'] }}</p> <!-- Display name from dataset -->
       </div>
-      <div class="dermatologist">
-        <img src="{{ url_for('static', filename='images/image3.png') }}" alt="Doctor 2">
-        <p>Dr. Name 2</p>
-      </div>
-      <div class="dermatologist">
-        <img src="{{ url_for('static', filename='images/image4.png') }}" alt="Doctor 3">
-        <p>Dr. Name 3</p>
-      </div>
-      <div class="dermatologist">
-        <img src="{{ url_for('static', filename='images/image5.png') }}" alt="Doctor 4">
-        <p>Dr. Name 4</p>
-      </div>
-      <div class="dermatologist">
-        <img src="{{ url_for('static', filename='images/image6.png') }}" alt="Doctor 5">
-        <p>Dr. Name 5</p>
-      </div>
-      <div class="dermatologist">
-        <img src="{{ url_for('static', filename='images/image7.png') }}" alt="Doctor 6">
-        <p>Dr. Name 6</p>
-      </div>
+      {% endfor %}
     </div>
+    <a href="/book_now">View all</a>
   </section>
 
   <section class="dermatologist-info">
@@ -74,7 +58,7 @@
         <h2>Find a Dermatologist Near You</h2>
         <p>Your skin deserves the best care. Our platform connects you with highly skilled dermatologists across
           multiple locations, ensuring expert advice is just a few clicks away.</p>
-        <button class="cta-button">Find Here</button>
+        <a id="book-button" href="/book_now">Find Here</a>
       </div>
     </div>
   </section>
@@ -85,7 +69,7 @@
         <h2>Shop Dermatologist Approved Skincare</h2>
         <p>Shop dermatologist-approved skincare for every skin type. Our clinically-tested products target acne, aging,
           hydration, and more. Achieve healthier, glowing skin today!</p>
-        <button class="cta-button"><a href="main.html">Explore More!</a></button>
+        <a id="book-button" href="/get_recommendations">Explore Now</a>
       </div>
       <div class="image1-content">
         <img src="{{ url_for('static', filename='images/image8.png') }}" alt="Dermatologist Approved Skincare">
@@ -93,23 +77,22 @@
     </div>
   </section>
 
-  <section class="hub-info">
-    <div class="hub-container">
-      <div class="hubimage-container">
+  <section class="dermatologist-info">
+    <div class="info-container">
+      <div class="image-container">
         <img src="{{ url_for('static', filename='images/image1.png') }}" alt="Education Hub">
       </div>
-      <div class="text1-container">
+      <div class="text-container">
         <h2>Skincare Education Hub</h2>
         <p>Learn from top dermatologists with our Skincare Education Hub. Access articles, videos, and tutorials on skin
           types, ingredients, and routines. Stay informed on the latest skincare trends and treatment options.</p>
-        <button class="cta-button"><a href="article.html">Find Here</a></button>
+        <a id="book-button" href="/article">Find Here</a>
       </div>
     </div>
   </section>
 
   <section class="testimonials">
     <h2>User Reviews</h2>
-    <p>What our users have to say about us</p>
     <div class="testimonial-container">
       <div class="testimonial">
         <img src="{{ url_for('static', filename='images/image13.png') }}" alt="User 1">
@@ -149,7 +132,6 @@
   <section class="faq-section">
     <div class="faq-container">
       <h2>Frequently Asked Questions</h2>
-      <p>Here are some frequently asked questions to help enhance your experience with our platform.</p>
       <div class="faq-list">
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFAQ(this)">
@@ -185,7 +167,7 @@
   <footer class="footer-section">
     <div class="footer-container">
       <div class="footer-logo">
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Company Logo">
+        <img src="{{ url_for('static', filename='footer-logo.png') }}" alt="Company Logo">
         <p>Your trusted skincare partner.</p>
       </div>
 
